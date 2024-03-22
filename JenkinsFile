@@ -1,5 +1,5 @@
 // Define environment variables
-env.docker_image_name = "oleksii/http_server"
+env.docker_image_name = "oleksiisyzonov/http_server"
 def dockerRegistry = "registry.hub.docker.com"
 def dockerImage
 
