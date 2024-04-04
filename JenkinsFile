@@ -23,7 +23,7 @@ node {
     stage('Pushing Image') {
         withCredentials([usernamePassword(credentialsId: 'docker_entry', passwordVariable: 'DOCKER_PASSWORD', usernameVariable: 'DOCKER_USERNAME')]) {
             docker.withRegistry("https://${dockerRegistry}", 'docker_entry') {
-                dockerImage.push()
+                dockerImage.push("commit_verification")
             }
         }
     }
